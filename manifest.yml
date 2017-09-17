@@ -1,0 +1,9 @@
+---
+disk_quota: 1024M
+domain: mybluemix.net
+instances: 1
+memory: 2000M
+applications:
+- name: comm190-scc
+  host: comm190-scc
+  command: python app.py
