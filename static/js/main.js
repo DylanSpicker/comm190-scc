@@ -107,13 +107,13 @@ function parseTweetList(tweet_list) {
         $tweet_div = $('<div data-tweet_id="'+tweet['tweet_id']+'" data-user="'+tweet['screen_name']+'" class="tweet_holder row col-6 bg-white p-0 pt-5 pb-5 m-0 no-gutter" />');
         
         $profile_holder = $('<div class="p-2 m-0 col-2" />');
-        $profile_image = $('<img class="profile" src="'+tweet['profile_image']+'" alt="Image" />');
-        $profile_holder.append($profile_image);
+        // $profile_image = $('<img class="profile" src="'+tweet['profile_image']+'" alt="Image" />');
+        // $profile_holder.append($profile_image);
 
         $tweet_content_div = $('<div class="p-0 m-0 col-8" />');
-        $username = $('<p>'+tweet['name']+' <a href="'+tweet['profile_url']+'" target="_BLANK">@'+tweet['screen_name']+'</a></p>');
+        // $username = $('<p>'+tweet['name']+' <a href="'+tweet['profile_url']+'" target="_BLANK">@'+tweet['screen_name']+'</a></p>');
         $tweet_text = $('<p>'+tweet['text']+'</p>');
-        $tweet_content_div.append($username);
+        // $tweet_content_div.append($username);
         $tweet_content_div.append($tweet_text);
         
         $emoticon_div = $('<div class="p-0 m-0 col-2 text-center pt-4" />');
@@ -208,7 +208,7 @@ $(document).ready(function(){
             },
             success: function(profile){
                 $("#personality .container").html("");
-                $("#personality .container").append("<h4>@"+$('.tweet_holder.active').data('user')+"</h4>");
+                // $("#personality .container").append("<h4>@"+$('.tweet_holder.active').data('user')+"</h4>");
                 profile["personality"].forEach(function(personality){
                     var personality_string = "<div class='personality pb-3' title='"+personality['name']+"' >";
                     
